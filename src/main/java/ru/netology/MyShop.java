@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyShop implements Shop {
-    protected HashMap<String, Integer> listOfProducts = new HashMap<>();
+    protected Map<String, Integer> listOfProducts = new HashMap<>();
 
     public MyShop() {
     }
@@ -14,8 +14,8 @@ public class MyShop implements Shop {
     }
 
     @Override
-    public MyShop addToListOfProducts(Product product) {
-        listOfProducts.put(product.getName(), product.getPrice());
+    public MyShop addToListOfProducts(String title, int price) {
+        listOfProducts.put(title, price);
         return this;
     }
 
